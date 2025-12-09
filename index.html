@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>菅沢たまき 公式サイト</title> <style>
+    <title>菅沢たまき 公式サイト</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -11,33 +13,39 @@
         }
         
         body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            /* 💡 リッチ化: カスタムフォントを適用 */
+            font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background-color: #FFF8E1; /* 卵色系の全体背景 */
+            /* 💡 リッチ化: 非常に細かいドットの背景テクスチャを追加 */
+            background-image: radial-gradient(#FFDDAA 1px, transparent 0);
+            background-size: 8px 8px;
         }
         
+        /* 💡 ヒーローセクションのフォントサイズと影を強調 */
         .hero {
-            background: linear-gradient(135deg, #FFDDAA 0%, #FFB677 100%); /* 柔らかい暖色グラデーション */
+            background: linear-gradient(135deg, #FFDDAA 0%, #FFB677 100%);
             color: #333;
             padding: 100px 20px;
             text-align: center;
         }
         
         .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            font-size: 3.5em; /* サイズアップ */
+            margin-bottom: 25px;
+            text-shadow: 2px 3px 5px rgba(0,0,0,0.2); /* 影を強調 */
+            font-weight: 900; /* フォントを太く */
         }
         
         .hero .name {
-            font-size: 2.5em;
+            font-size: 3em; /* サイズアップ */
             margin: 20px 0;
             font-weight: bold;
         }
         
         .hero .subtitle {
-            font-size: 1.3em;
+            font-size: 1.5em; /* サイズアップ */
             margin-top: 10px;
         }
         
@@ -52,11 +60,27 @@
         }
         
         h2 {
-            font-size: 2.2em;
+            font-size: 2.5em;
             color: #667eea;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #FFC107; /* 暖色系アンバーに調整 */
+            /* 💡 リッチ化: 下線を柔らかい点線に変更 */
+            border-bottom: 2px dashed #FFDDAA;
+            font-weight: 700;
+            position: relative;
+        }
+
+        /* 💡 リッチ化: h2の下にアクセントカラーのデコレーションラインを追加 */
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; /* 点線の下に配置 */
+            left: 0;
+            width: 70px; /* 長さを強調 */
+            height: 6px;
+            background-color: #FFC107;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(255, 193, 7, 0.4);
         }
         
         .profile {
@@ -74,6 +98,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 影を強調 */
         }
         
         .profile-image img {
@@ -84,7 +109,7 @@
         }
 
         .profile-content h3 {
-            font-size: 1.8em;
+            font-size: 2em;
             color: #2c3e50;
             margin-bottom: 20px;
         }
@@ -104,23 +129,23 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* 影を強調し立体感を出す */
             transition: transform 0.3s;
         }
         
         .policy-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-8px); /* 動きを強調 */
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
         }
         
         .policy-card h3 {
             color: #667eea;
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 15px;
         }
         
         .achievements {
-            background: #FDF5E6; /* 薄いアイボリーに調整 */
+            background: #FDF5E6;
             padding: 30px;
             border-radius: 10px;
         }
@@ -134,8 +159,9 @@
             padding: 15px;
             margin-bottom: 10px;
             background: white;
-            border-left: 4px solid #FFC107; /* 暖色系アンバーに調整 */
+            border-left: 5px solid #FFC107; /* 境界線を太く */
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 軽い影を追加 */
         }
         
         .achievements li strong {
@@ -146,24 +172,47 @@
             background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%); /* 暖色グラデーション */
             color: #333;
             padding: 40px;
-            border-radius: 10px;
+            /* 💡 リッチ化: 下辺に丸みを持たせる造形 */
+            border-radius: 15px 15px 60px 60px;
             text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* 影をさらに強調 */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 💡 リッチ化: ビジョンボックスに subtle なグラデーションオーバーレイを追加 */
+        .vision-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 100% 150%, #FFDDAA, #FFB677);
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .vision-box h3, .vision-box p {
+            position: relative;
+            z-index: 2; /* テキストがオーバーレイの上にくるように */
         }
         
         .vision-box h3 {
-            font-size: 2em;
+            font-size: 2.2em;
             margin-bottom: 20px;
         }
         
         .vision-box p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             line-height: 2;
         }
         
         .contact-info {
-            background: #FDF5E6; /* 薄いアイボリーに調整 */
+            background: #FDF5E6;
             padding: 40px;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
         .contact-grid {
@@ -182,16 +231,17 @@
             display: inline-block;
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: white;
-            padding: 15px 40px;
+            padding: 18px 50px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2em;
-            margin-top: 20px;
+            font-size: 1.3em;
+            margin-top: 30px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* 影を強調 */
             transition: transform 0.3s;
         }
         
         .instagram-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
         
         footer {
@@ -203,11 +253,11 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             
             .hero .name {
-                font-size: 1.8em;
+                font-size: 2.2em;
             }
             
             .profile {
@@ -216,6 +266,11 @@
             
             .policies {
                 grid-template-columns: 1fr;
+            }
+            
+            h2::after {
+                width: 50px;
+                height: 4px;
             }
         }
     </style>
